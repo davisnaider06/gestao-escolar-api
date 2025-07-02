@@ -1,0 +1,12 @@
+services:
+  api:
+    build: .
+    container_name: gestao-escolar
+    ports:
+      - "8000:8000"
+    volumes:
+      - db_data:/app/data
+
+volumes:
+  db_data:
+    driver: local
